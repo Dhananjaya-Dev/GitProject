@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f2">
+  <title>Test | Core Notes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="test">
+  <!-- Shared navigation keeps all three steps available from every page. -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Core Notes home">
+      <span class="brand-mark" aria-hidden="true">cn</span>
+      <span>core notes<span class="brand-period">.</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">About</a>
+      <a href="test.html" aria-current="page">Test</a>
+      <a href="verify.html">Verify</a>
+    </nav>
+    <span class="header-note">A short knowledge check <span aria-hidden="true">↗</span></span>
+  </header>
+
+  <main class="page-shell form-page">
+    <div class="page-heading">
+      <p class="eyebrow"><span class="status-dot"></span> KNOWLEDGE CHECK / 02</p>
+      <h1 id="page-title">What stuck with you<span class="heading-period">?</span></h1>
+      <p class="intro-deck">Share a few concepts from the overview. Your keywords are checked against the original summary.</p>
+    </div>
+
+    <div class="form-layout">
+      <!-- Client-side validation provides immediate feedback before navigation. -->
+      <form id="knowledge-form" class="knowledge-form" novalidate>
+        <div class="field-row">
+          <label class="field">
+            <span class="field-heading">Your name <span class="field-limit">UP TO 10 LETTERS</span></span>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="e.g. Jordan" maxlength="10" pattern="\p{L}+" required aria-describedby="name-error">
+            <span class="field-error" id="name-error" aria-live="polite"></span>
+          </label>
+          <label class="field">
+            <span class="field-heading">Email address <span class="field-limit">UP TO 20 CHARACTERS</span></span>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="20" required aria-describedby="email-error">
+            <span class="field-error" id="email-error" aria-live="polite"></span>
+          </label>
+        </div>
+
+        <label class="field keywords-field" for="keywords">
+          <span class="field-heading">Keywords &amp; concepts <span class="field-limit">UP TO 100 WORDS</span></span>
+          <textarea id="keywords" name="keywords" rows="7" placeholder="Try: dependency injection, beans, ORM, transactions..." required aria-describedby="keywords-hint keywords-error"></textarea>
+          <span class="field-meta"><span id="keywords-hint">Matches are checked against the About summary.</span><span id="word-count">0 / 100 words</span></span>
+          <span class="field-error" id="keywords-error" aria-live="polite"></span>
+        </label>
+
+        <div class="form-bottom">
+          <span class="privacy-note"><span class="privacy-dot" aria-hidden="true"></span> Your details stay in this browser session.</span>
+          <button class="button button-primary" type="submit">Check my answers <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <aside class="score-preview" aria-label="Live keyword match preview">
+        <div class="preview-top"><span>LIVE PREVIEW</span><span class="preview-pulse" aria-hidden="true"></span></div>
+        <div class="preview-score" id="preview-percent">0<span>%</span></div>
+        <p class="preview-caption">keyword match</p>
+        <div class="preview-rule"></div>
+        <p class="preview-detail"><strong id="preview-count">0 words matched</strong><span>of the words in your response</span></p>
+        <a href="index.html" class="text-link">Review the summary <span aria-hidden="true">↗</span></a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer page-shell"><span>CORE NOTES <span class="brand-period">.</span></span><span>SPRING CORE × HIBERNATE</span></footer>
+</body>
+</html>
