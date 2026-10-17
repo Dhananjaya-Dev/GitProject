@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f2">
+  <title>About | Core Notes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="about">
+  <!-- Shared navigation keeps all three steps available from every page. -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Core Notes home">
+      <span class="brand-mark" aria-hidden="true">cn</span>
+      <span>core notes<span class="brand-period">.</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">About</a>
+      <a href="test.html">Test</a>
+      <a href="verify.html">Verify</a>
+    </nav>
+    <span class="header-note">A short knowledge check <span aria-hidden="true">↗</span></span>
+  </header>
+
+  <main>
+    <!-- Overview introduction and concept diagram. -->
+    <section class="about-intro page-shell" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="eyebrow"><span class="status-dot"></span> JAVA · FOUNDATIONS</p>
+        <h1 id="page-title">The structure behind<br><span>reliable applications.</span></h1>
+        <p class="intro-deck">A concise field guide to Spring Core and Hibernate: two foundations for building Java applications with clarity and less repetition.</p>
+        <a class="button button-primary" href="test.html">Take the knowledge check <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="intro-art" aria-label="Spring and Hibernate concept diagram" role="img">
+        <div class="diagram-topline"><span>JAVA STACK / 01</span><span>CORE CONCEPTS</span></div>
+        <div class="diagram-node node-spring"><span class="node-index">01</span><strong>Spring Core</strong><small>Object wiring</small></div>
+        <div class="diagram-connector" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="diagram-node node-hibernate"><span class="node-index">02</span><strong>Hibernate</strong><small>Data mapping</small></div>
+        <div class="diagram-caption"><span>APPLICATION</span><span class="caption-line"></span><span>FOUNDATIONS</span></div>
+        <span class="art-index" aria-hidden="true">01—02</span>
+      </div>
+    </section>
+
+    <section class="summary-section" aria-labelledby="summary-title">
+      <div class="page-shell summary-layout">
+        <div class="section-label">
+          <span class="section-number">01</span>
+          <h2 id="summary-title">The essentials</h2>
+          <span class="label-rule" aria-hidden="true"></span>
+          <p>Two tools, one cohesive application.</p>
+        </div>
+        <!-- app.js renders this canonical summary for both display and scoring. -->
+        <div class="summary-copy" id="about-summary"></div>
+      </div>
+    </section>
+
+    <section class="next-step page-shell" aria-label="Continue to the knowledge check">
+      <div><span class="eyebrow">READY WHEN YOU ARE</span><h2>Put the concepts in your own words.</h2></div>
+      <a class="button button-dark" href="test.html">Start the check <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer page-shell"><span>CORE NOTES <span class="brand-period">.</span></span><span>SPRING CORE × HIBERNATE</span></footer>
+</body>
+</html>
