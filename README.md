@@ -3,9 +3,9 @@
 Welcome to my GitProject!
 
 ## About
-This repository contains my web development practice project.
+This is my web development practice project.
 
-## Technologies Used
+## Technologies
 - HTML
 - CSS
 - JavaScript
